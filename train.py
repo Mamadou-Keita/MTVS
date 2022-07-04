@@ -75,10 +75,9 @@ def _train(args):
     print(model.summary())
 
     datagen = ImageDataGenerator(
-        rescale= 1/255.,
         horizontal_flip= True,
         vertical_flip= True,
-        # preprocessing_function = preprocess_input
+        preprocessing_function = preprocess_input
      )
 
     train_generator = datagen.flow_from_dataframe(
