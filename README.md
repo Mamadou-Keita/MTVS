@@ -55,12 +55,3 @@ The model is tested on the remaining 20% of each database.
 ```
 python test.py -m /PATH-TO-TRAINED-MODEL -i ./data/test.csv
 ```
-
-> Visual Quality Assessment Test Result on PEID Data Set
-
-![assets/VisualQuality.png](assets/VisualQuality.png)
-
-
-> Visual Security Assessment Test Result on PEID Data Set
-
-![assets/VisualSecurity.png](assets/VisualSecurity.png)
