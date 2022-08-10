@@ -1,6 +1,6 @@
-# MultiTask Visual Metric
+# Multi-Task Visual Security Metric
 
-In this work, we propose a non reference CNN-based image quality and visual security metric for perceptually encrypted images
+In this work, we propose a no-reference CNN-based image quality and visual security metric for perceptually encrypted images
 
 ![assets/multiTask.png](assets/multiTask.png)
 
@@ -18,7 +18,7 @@ The PEID database contains 20 reference gray-scale images of size 512 × 512, en
 
 ## Purpose: 
 
-Image Quality and Visual Security Assessment ( using non reference mode ) 
+Image Quality and Visual Security Assessment (using no-reference metric) 
 
 ## Preprocessing-data
 
@@ -28,18 +28,18 @@ First, we divide all images into Np (4 in our case) small patches of size 256 ×
 
 > Patch labelling
 
-we design a labeling algorithm to automatically assign to each sampled patch the score of the encrypted image
+we designed a labeling algorithm to automatically assign to each sampled patch the score of the encrypted image
 
 
 ## Model
 
 ### Environment
 
-We conduct all of our experiments using the open-source library Keras, Tensorflow as backend, and performed it on Google Colab. 
+We conducted all of our experiments using the open-source library Keras, Tensorflow as backend, and performed it on Google Colab. 
  
 ### Training
 
-Our model is trained, for each database, on the 80%. 
+Our model is trained on 80% of rach database. 
 During the model training phase, each mini-batch contained 64 patches derived from 16 images, and each image is represented by 4 patches. The MSE loss function and a learning rate η equal to 0.0001 are used for the Adam optimizer. A dropout regularization is added to all FC layers with probability 0.2 to prevent overfitting. 
 The model is trained by backpropagation over several sets of epochs 500 with the EarlyStopping technique to address the overfitting problem.
 
